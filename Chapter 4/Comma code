@@ -1,0 +1,12 @@
+#List Practice project
+spam = ['Apples','Bananas','tofu','cats']
+
+def comma(listName):
+    count=0
+    string=''
+    while count<(len(listName)-1):
+        string=(string+listName[count] +', ')
+        count+=1
+    return string + 'and ' + listName[count]
+
+print (comma(spam))
