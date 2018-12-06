@@ -1,0 +1,15 @@
+def collatz(UserInput):
+    
+    while UserInput != 1:
+        IsEven = (UserInput % 2)
+        if (IsEven==0):
+            UserInput=(UserInput//2)
+            print(UserInput)    
+        elif (IsEven==1):
+            UserInput=(3 * UserInput + 1)
+        else:
+            print ("Something has gone wrong here")
+    return (UserInput)
+
+User=int(input("Please enter a number, I will then show a demonstration of the collatz sequence: "))
+collatz(User)
