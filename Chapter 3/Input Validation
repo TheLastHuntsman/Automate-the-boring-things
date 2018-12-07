@@ -9,9 +9,7 @@ def collatz(UserInput):
             UserInput=(3 * UserInput + 1)
         else:
             print ("Something has gone wrong here")
-    if UserInput==1:
-        print ("We're done here")
-  #  return (UserInput)
+    return (UserInput)
 
 def IsInt(UserInput):
     try:
