@@ -1,1 +1,40 @@
-print ("hi")
+def collatz(UserInput):
+    
+    while UserInput != 1:
+        IsEven = (UserInput % 2)
+        if (IsEven==0):
+            UserInput=(UserInput//2)
+            print(UserInput)    
+        elif (IsEven==1):
+            UserInput=(3 * UserInput + 1)
+        else:
+            print ("Something has gone wrong here")
+    if UserInput==1:
+        print ("We're done here")
+  #  return (UserInput)
+
+def IsInt(UserInput):
+    try:
+        UserInput=int(UserInput)
+        return True
+    except ValueError:
+        return False
+
+def main():
+    User=input("Please enter a number, I will then show a demonstration of the collatz sequence: ")
+    if IsInt(User)==True:
+        User=int(User)
+        print (collatz(User))
+    else:
+        print("Sorry, that's not an integer please try again")
+        main()
+
+main()
+while True:
+    Round2=input("Thanks for using this program, if you'd like to go again, type Y, if not, press anything to exit ")
+    if Round2 == "y" or Round2 =="Y":
+        main()
+    else:
+        print("Chao.")
+        break
+
