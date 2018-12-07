@@ -22,7 +22,7 @@ def main():
     User=input("Please enter a number, I will then show a demonstration of the collatz sequence: ")
     if IsInt(User)==True:
         User=int(User)
-        print (collatz(User))
+        collatz(User)
     else:
         print("Sorry, that's not an integer please try again")
         main()
